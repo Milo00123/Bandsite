@@ -1,0 +1,447 @@
+@font-face {
+  font-family: Avenir-regular;
+  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: avenir-bold;
+  src: url(../Assets/Font/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: avenir-demi;
+  src: url(../Assets/Font/AvenirNextLTPro-Demi.otf);
+}
+body {
+  font-family: Avenir-regular;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-nav h2:hover {
+  transform: scale(1.1);
+}
+
+.main-nav {
+  background-color: #323232;
+  color: #fff;
+  transition: transform 0.2s;
+}
+.main-nav h2 {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.list-container {
+  width: 100%;
+}
+.list-container ul {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-container ul li {
+  width: 50%;
+  text-align: center;
+}
+
+.text-underline {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+}
+
+.image-header--container {
+  width: 100%;
+  height: 11.8rem;
+  background-image: url("../Assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  filter: brightness(80%);
+}
+.image-header--container h1 {
+  font-family: avenir-demi;
+  font-size: 24px;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.description h1 {
+  font-family: avenir-demi;
+  margin: 20px;
+  font-size: 24px;
+  color: #323232;
+}
+.description h3 {
+  padding-top: 15px;
+}
+.description p {
+  color: #323232;
+  margin: 0;
+}
+
+.image-container--description {
+  width: 90%;
+  height: 150px;
+  background-image: url("../Assets/Images/band.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.p-container {
+  display: grid;
+  margin: 16px;
+}
+.p-container p {
+  margin-top: 16px;
+}
+
+.description-p--bold {
+  font-family: avenir-demi;
+  margin-top: 0;
+}
+
+.gallery {
+  background-color: #fafafa;
+}
+.gallery h1 {
+  font-family: avenir-demi;
+  margin-left: 16px;
+  margin-bottom: 0;
+  font-size: 24px;
+  color: #323232;
+}
+
+.image-gallery:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+.image-gallery--container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row-one, .row-two, .row-three {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.image-gallery {
+  transition: transform 0.2s;
+  filter: grayscale(1);
+}
+
+.image-gallery--one {
+  background-image: url("../Assets/Images/Photo-gallery-1.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--two {
+  background-image: url("../Assets/Images/Photo-gallery-2.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--three {
+  background-image: url("../Assets/Images/Photo-gallery-3.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--four {
+  background-image: url("../Assets/Images/Photo-gallery-4.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--five {
+  background-image: url("../Assets/Images/Photo-gallery-5.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--six {
+  background-image: url("../Assets/Images/Photo-gallery-6.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--seven {
+  background-image: url("../Assets/Images/Photo-gallery-7.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--eight {
+  background-image: url("../Assets/Images/Photo-gallery-8.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.image-gallery--nine {
+  background-image: url("../Assets/Images/Photo-gallery-9.jpg");
+  width: 90%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}
+
+.main-footer {
+  width: 100%;
+  height: 650px;
+  background-color: #323232;
+  color: #fff;
+  padding-left: 16px;
+}
+.main-footer p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.main-footer h2 {
+  padding-top: 20px;
+}
+
+.image-footer--container {
+  width: 120px;
+  height: 22px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bold {
+  margin: 0;
+  font-family: avenir-demi;
+}
+
+.description-footer--one, .description-footer--two, .description-footer--three {
+  margin-top: 20px;
+}
+.description-footer--one p, .description-footer--two p, .description-footer--three p {
+  margin: 0;
+}
+
+.footer-email {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .main-nav--tablet {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-container {
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    margin-left: 5%;
+  }
+  .list-container {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  .list-container li {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  .image-header--container {
+    width: 100%;
+    height: 400px;
+  }
+  .image-header--container h1 {
+    font-size: 60px;
+    margin-left: 5%;
+  }
+}
+@media (min-width: 768px) {
+  .description h1 {
+    font-size: 36px;
+    margin-left: 5%;
+  }
+  .description h3 {
+    font-size: 36px;
+  }
+  .image-container--description {
+    width: 75%;
+    height: 250px;
+  }
+  .p-container {
+    width: 75%;
+    margin: auto;
+  }
+  .text-under--pic {
+    font-size: 24px;
+  }
+  .container-p--wrap {
+    display: flex;
+    align-items: flex-start;
+    line-height: 22px;
+    padding-bottom: 30px;
+  }
+  .container-p--wrap p {
+    font-size: 14px;
+  }
+  .p-container--two {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .gallery h1 {
+    margin-left: 5%;
+  }
+  .image-gallery--container {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+  .image-gallery {
+    min-width: 200px;
+    height: 150px;
+    flex-grow: 1;
+    margin: 0;
+  }
+  .row-one, .row-two, .row-three {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin: 0;
+  }
+}
+@media (min-width: 768px) {
+  .main-footer {
+    height: 400px;
+    position: relative;
+    margin: auto;
+    padding-left: 0;
+  }
+  .main-footer p {
+    margin-left: 6%;
+  }
+  .main-footer h3 {
+    position: absolute;
+    font-size: 24px;
+    top: 90px;
+    right: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  .block-cero {
+    width: 48%;
+    padding-top: 30px;
+    margin-left: 6%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .block-cero h2 {
+    font-size: 36px;
+  }
+  .block-wrap {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .block-wrap p {
+    font-size: 14px;
+  }
+  .copyright {
+    margin: 0;
+  }
+}
+@media (min-width: 1279px) {
+  .image-header--container {
+    height: 800px;
+  }
+  .description h1 {
+    padding: 20px 0 20px 0;
+  }
+  .image-container--description {
+    height: 600px;
+  }
+  .p-container--one {
+    width: 75%;
+  }
+  .gallery h1 {
+    font-size: 36px;
+    padding: 50px 0 50px 0;
+  }
+  .image-gallery {
+    height: 200px;
+  }
+  .main-footer {
+    height: 400px;
+  }
+  .main-footer h3 {
+    right: 100px;
+  }
+  .block-cero {
+    width: 30%;
+  }
+  .block-wrap {
+    width: 60%;
+    margin-left: 6%;
+    padding-bottom: 50px;
+  }
+  .block-wrap p {
+    margin: 0;
+  }
+}/*# sourceMappingURL=bio.css.map */
