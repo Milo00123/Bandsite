@@ -1,0 +1,28 @@
+
+@import url(./_variables.scss);
+
+@mixin tablet{
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+
+  @mixin desktop{
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+
+@mixin images(){
+    width: 90%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+}
+  
+
+
+
+
+

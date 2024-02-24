@@ -1,19 +1,21 @@
-$tablet: 768px;
-$desktop: 1279px;
+
+@use "./partials/mixins";
+@import url(./partials/font/AvenirNextLTPro-Bold.otf);
+
 
 @font-face {
     font-family: Avenir-regular ;
-    src: url(../Assets/Font/AvenirNextLTPro-Regular.otf) format('opentype');
-    
+    src: url("./partials/font/AvenirNextLTPro-Regular.otf") format('opentype');
 }
 @font-face {
     font-family: avenir-bold;
-    src: url(../Assets/Font/AvenirNextLTPro-Bold.otf);
+    src: url(./partials/font/AvenirNextLTPro-Bold.otf) format('opentype');
 }
 @font-face {
     font-family: avenir-demi ;
-    src: url(../Assets/Font/AvenirNextLTPro-Demi.otf);
-}
+    src: url(./partials/font/AvenirNextLTPro-Demi.otf) format('opentype');
+};
+
 body{
     font-family: Avenir-regular;
     margin: 0;
@@ -27,7 +29,9 @@ a{
 .main-nav h2:hover{
     transform: scale(1.1);
 }
+
 .main-nav{
+
     background-color: #323232;
     color: #fff;
     transition: transform .2s;
@@ -59,22 +63,27 @@ a{
     padding-bottom: 1rem;
     border-bottom: 2px solid #fff;
 }
+.img-header--wrap{
+    width: 100%;
+    height: 11.8rem;
+    position: relative;
+    
+    h1{
+        color: #fff;
+        position: absolute;
+        top: 30%;       
+        font-family: avenir-demi;
+        font-size: 24px;
+        margin-left: 20px;        
+    }
+}
 .image-header--container{
     width: 100%;
     height: 11.8rem;
-    background-image: url('../Assets/Images/hero-bio.jpg');
     background-position: center;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    filter: brightness(80%);
-    h1{
-        font-family: avenir-demi;
-        font-size: 24px;
-        margin-left: 20px;
-        color: #fff;
-        
-    }
+     filter: brightness(60%);
+    
 }
 //DESCRIPTION//
 .description{
@@ -83,7 +92,8 @@ a{
     background-color: #fff;
     h1{
         font-family: avenir-demi;
-        margin: 20px;
+        padding: 24px 0 16px 16px;
+        margin: 0;
         font-size: 24px;
         color: #323232;
     }
@@ -125,6 +135,7 @@ a{
 
 .gallery{
     background-color: #fafafa;
+    height: 1980px;
     
     h1{
         font-family: avenir-demi;
@@ -142,9 +153,11 @@ a{
     
 }
 .image-gallery--container{
+
     display: flex;
     flex-direction: column;
     gap: 16px
+    
 }
 .row-one, .row-two, .row-three{
     display: flex;
@@ -158,86 +171,152 @@ a{
 
 .image-gallery--one{
     background-image:url('../Assets/Images/Photo-gallery-1.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 
 }
 .image-gallery--two{
     background-image:url('../Assets/Images/Photo-gallery-2.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 
 }
 .image-gallery--three{
     background-image:url('../Assets/Images/Photo-gallery-3.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 }
 .image-gallery--four{
     background-image:url('../Assets/Images/Photo-gallery-4.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 }
 .image-gallery--five{
     background-image:url('../Assets/Images/Photo-gallery-5.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 }
 .image-gallery--six{
     background-image:url('../Assets/Images/Photo-gallery-6.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 }
 .image-gallery--seven{
     background-image:url('../Assets/Images/Photo-gallery-7.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 }
 .image-gallery--eight{
     background-image:url('../Assets/Images/Photo-gallery-8.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
 }
 .image-gallery--nine{
     background-image:url('../Assets/Images/Photo-gallery-9.jpg');
-    width: 90%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    margin: auto;
+    @include images()
+}
+// comment section//
+
+.section-form{
+    width: 100%;
+    height: auto;
+    h1{
+        font-family: avenir-demi;
+        font-size: 25px;
+        color: #323232;
+        margin-left: 5%;
+        
+    }
 }
 
 
-.main-footer{
+form{
+    width: 90%;
+    display: flex;
+    
+   margin: auto;
+   img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 25px;
+   }
+
+   .form-container{
     width: 100%;
-    height: 650px;
+    label{
+        font-family: avenir-demi;
+        color: #e1e1e1;
+        font-size: 5px;
+        
+    }
+   }
+   input{  
+    width: 98%;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border: 2px solid #e1e1e1;
+    border-radius: 4px;
+    background-color: #fafafa;
+    
+   }
+   textarea{   
+    width:98% ;
+    height: 100px;
+    margin-top: 10px;
+    border: 2px solid #e1e1e1;
+    border-radius: 4px;
+    background-color: #fafafa;
+   
+   }
+   button:hover{
+    background-color: black;
+   }
+   button{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
     background-color: #323232;
     color: #fff;
-    padding-left: 16px;
+    margin-top: 10px ;
+    margin-bottom: 20px;
+   }
+
+}
+
+.comment-wrap{
+    width: 90%;
+    border-bottom: 1px solid #e1e1e1;
+    border-top:1px solid #e1e1e1 ;
+    margin: auto;
+    display: flex;
+}
+.inner-div{
+    width: 80%;
+}
+.avatar{
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.inner-inner-div{
+    display: flex;
+    justify-content:space-between;
+}
+.date-p{
+    color: #e1e1e1;
+    margin-bottom: 0;
+}
+.name-p{
+    margin-bottom: 0;
+}
+
+//FOOOOOOOOOOOOTER//
+.main-footer{
+    width: 100%;
+    height: 680px;
+    background-color: #323232;
+    color: #fff;
+    
+    
 
     p{
         font-size: 14px;
@@ -248,6 +327,10 @@ a{
         padding-top: 20px;
     }
 }
+.main-footer-wrap{
+    
+    padding-left: 16px;
+}
 
 .image-footer--container{
     width: 120px;
@@ -256,14 +339,11 @@ a{
     display: flex;
     justify-content: space-between;
     
-
 }
 .footer-bold{
     margin: 0;
-    font-family: avenir-demi;
-    
+    font-family: avenir-demi;  
 }
-
 
 .description-footer--one, .description-footer--two, .description-footer--three{
     margin-top: 20px;
@@ -278,7 +358,7 @@ a{
  //    MEDIAS     //
 
 //HEADER MEDIA TABLET//
-@media (min-width: $tablet){
+@include tablet{
     .main-nav--tablet{
         width: 100%;
         height: 90px;
@@ -307,27 +387,37 @@ a{
             margin-left: 20px;
         }
     }
-    .image-header--container{
-        width: 100%;
+    .img-header--wrap{
         height: 400px;
-        h1{          
+        
+        h1{
+            top: 30%;       
             font-size: 60px;
-            margin-left: 5%;           
+            margin-left: 5%;        
         }
-    }   
-}
+    }
+    .image-header--container{
+        height: 400px;
+    
+}}
 
 //DESCRIPTION @MEDIA TABLET//
 
-@media(min-width: $tablet){
+@include tablet{
     .description{
         h1{
             font-size: 36px;
             margin-left: 5%;
+            padding: 48px 0 36px 36px;
         }
         h3{
-            font-size: 36px;
+            font-family: avenir-demi;
+            font-size: 24px;
         }
+    }
+    .text-under--pic{
+        padding-top: 20px;
+        
     }
     .image-container--description{
         width: 75%;
@@ -358,9 +448,9 @@ a{
     }
 
     //GALLERY @MEDIA TABLET//
-
-@media(min-width: $tablet){
+    @include tablet{
     .gallery{
+        height: auto;
         h1{
             margin-left: 5%;
         }
@@ -389,8 +479,36 @@ a{
     }    
 }
 
+//FORM AND COMMENT @MEDIA TABLET//
+@include tablet{
+.section-form{ h1{
+font-size: 36px;
+}}
+form{
+    width: 80%;
+  input{
+    height: 48px;
+  }  
+  textarea{
+    height: 120px;
+  }
+  button{
+    width: 30%;
+    margin-left: 70%;
+  }
+    
+}
+.comment-wrap{
+    width: 80%;
+
+}
+.inner-div{
+    width: 100%
+}
+};
+
 //FOOTER @MEDIA TABLET//
-@media(min-width: $tablet){
+@include tablet{
     .main-footer{
         height: 400px; ;
         position: relative;
@@ -430,21 +548,30 @@ a{
             font-size: 14px;
         }
     }
-    .copyright{
-        margin: 0;
+    .block-footer--one{
+        width: 35%;
     }
+    
 }
 
 
 //DESKTOP MEDIAAAAAA/////
 
-@media (min-width: $desktop){
+@include desktop{
+    .img-header--wrap{
+        height: 700px;
+        h1{
+            top: 35%;
+        }
+    }
     .image-header--container{
-        height: 800px;
+        height: 700px;
+        background-position: center;
+        background-size: cover;
     }
     .description{
         h1{
-            padding: 20px 0 20px 0;
+            padding: 48px 0 36px 36px;
         }
     }
     .image-container--description{
@@ -462,6 +589,16 @@ a{
     .image-gallery{
         height: 200px;
     }
+    .section-form{ h1{
+        font-size: 44px;
+        }}
+form{
+    width: 50%;
+    
+}
+.comment-wrap{
+    width: 50%;
+}
     .main-footer{
         height: 400px;
         h3{
@@ -478,6 +615,9 @@ a{
         p{
             margin: 0;
         }
+    }
+    .footer-email{
+        padding-top: 20px;
     }
 
 }
