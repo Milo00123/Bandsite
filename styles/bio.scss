@@ -1,19 +1,27 @@
 
-@import url(./partials/_mixins.scss);
+@use './partials/mixing-variables/mixins' as *;
+@import url(./partials/font/AvenirNextLTPro-Bold.otf);
 
 
 @font-face {
     font-family: Avenir-regular ;
-    src: url(./partials/Font/AvenirNextLTPro-Regular.otf) format('opentype');
+    src: url("./partials/font/AvenirNextLTPro-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: avenir-bold;
-    src: url(./partials/Font/AvenirNextLTPro-Bold.otf);
+    src: url(./partials/font/AvenirNextLTPro-Bold.otf) format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
 @font-face {
     font-family: avenir-demi ;
-    src: url(./partials/Font/AvenirNextLTPro-Demi.otf);
+    src: url(./partials/font/AvenirNextLTPro-Demi.otf) format('opentype');
+    font-weight: 600; 
+    font-style: normal;
 };
+
 
 body{
     font-family: Avenir-regular;
@@ -170,41 +178,41 @@ a{
 
 .image-gallery--one{
     background-image:url('../Assets/Images/Photo-gallery-1.jpg');
-    @include images()
+    @include images
 
 }
 .image-gallery--two{
     background-image:url('../Assets/Images/Photo-gallery-2.jpg');
-    @include images()
+    @include images
 
 }
 .image-gallery--three{
     background-image:url('../Assets/Images/Photo-gallery-3.jpg');
-    @include images()
+    @include images
 }
 .image-gallery--four{
     background-image:url('../Assets/Images/Photo-gallery-4.jpg');
-    @include images()
+    @include images
 }
 .image-gallery--five{
     background-image:url('../Assets/Images/Photo-gallery-5.jpg');
-    @include images()
+    @include images
 }
 .image-gallery--six{
     background-image:url('../Assets/Images/Photo-gallery-6.jpg');
-    @include images()
+    @include images
 }
 .image-gallery--seven{
     background-image:url('../Assets/Images/Photo-gallery-7.jpg');
-    @include images()
+    @include images
 }
 .image-gallery--eight{
     background-image:url('../Assets/Images/Photo-gallery-8.jpg');
-    @include images()
+    @include images
 }
 .image-gallery--nine{
     background-image:url('../Assets/Images/Photo-gallery-9.jpg');
-    @include images()
+    @include images
 }
 // comment section//
 
@@ -273,6 +281,7 @@ form{
     color: #fff;
     margin-top: 10px ;
     margin-bottom: 20px;
+    cursor: pointer;
    }
 
 }

@@ -1,14 +1,21 @@
+@import url(./partials/font/AvenirNextLTPro-Bold.otf);
 @font-face {
   font-family: Avenir-regular;
-  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
+  src: url("./partials/font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: avenir-bold;
-  src: url(../Assets/Font/AvenirNextLTPro-Bold.otf);
+  src: url(./partials/font/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
   font-family: avenir-demi;
-  src: url(../Assets/Font/AvenirNextLTPro-Demi.otf);
+  src: url(./partials/font/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
 }
 body {
   font-family: Avenir-regular;
@@ -295,6 +302,7 @@ form button {
   color: #fff;
   margin-top: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .comment-wrap {

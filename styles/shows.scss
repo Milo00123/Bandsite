@@ -1,17 +1,25 @@
-@import url(./partials/_mixins.scss);
+@use './partials/mixing-variables/mixins' as *;
 
 @font-face {
     font-family: Avenir-regular ;
-    src: url(./partials/Font/AvenirNextLTPro-Regular.otf) format('opentype');
+    src: url(./partials/font/AvenirNextLTPro-Regular.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    
 }
 @font-face {
     font-family: avenir-bold;
     src: url(./partials/Font/AvenirNextLTPro-Bold.otf);
+    font-weight: bold;
+    font-style: normal;
 }
 @font-face {
     font-family: avenir-demi ;
     src: url(./partials/Font/AvenirNextLTPro-Demi.otf);
+    font-weight: 600; 
+    font-style: normal;
 }
+
 body{
     font-family: Avenir-regular;
     margin: 0;
@@ -167,7 +175,7 @@ button{
     margin-right: auto;
     background-color: #323232;
     color: #fff;
-    
+    cursor: pointer;
 }
 
 //FOOTER//
@@ -346,6 +354,9 @@ button{
             padding: 0;
         }
     }
+    .inner-inner-block{
+        width: 150px;
+    }
     
     .block-cero{
         width: 48%;
@@ -419,6 +430,7 @@ button{
         margin-left: 100px;
         margin-top: 100px;
     }
+    
    
     .main-footer{
         height: 400px;
